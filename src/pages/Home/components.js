@@ -13,8 +13,7 @@ export const Card = styled.div`
   align-items: center;
 
   box-shadow: ${({ theme }) => theme.boxShadows[0]};
-
-  padding: ${({ theme }) => theme.spaces[4]}px;
+  color: blue;
 `
 
 export const Heading = styled.h3``

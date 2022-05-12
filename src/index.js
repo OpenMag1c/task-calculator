@@ -12,12 +12,15 @@ import Application from '@/App'
 import { store } from '@/store'
 import theme from '@/theme'
 import GlobalStyles from '@/globalStyles'
+import Layouts from '@/layouts'
 
 ReactDOM.render(
   <Provider store={store}>
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Application />
+        <Layouts>
+          <Application />
+        </Layouts>
         <GlobalStyles />
       </BrowserRouter>
     </ThemeProvider>
