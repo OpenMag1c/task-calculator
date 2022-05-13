@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {StyledFlex} from "@/containers/Flex/components"
 
 export const PageLayout = styled.div`
   width: 100%;
@@ -10,7 +11,7 @@ export const PageLayout = styled.div`
   margin: 0 auto;
 `
 
-export const MainWindow = styled.div`
+export const MainWindow = styled(StyledFlex)`
   height: 92%;
   width: 100%;
 

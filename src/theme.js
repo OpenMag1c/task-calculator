@@ -10,6 +10,8 @@ const primary = '#c06c84'
 const secondary = '#6c5b7b'
 const secondaryLight = '#6a6b7b'
 const dark = '#4a4543'
+const lightGray = '#ced4da'
+const light = '#eceff4'
 
 const boxShadows = [
   'box-shadow: 0px 4px 24px -8px rgba(0,0,0,0.75)',
@@ -55,5 +57,7 @@ export default {
     white,
     error,
     dark,
+    lightGray,
+    light,
   },
 }

@@ -1,20 +1,18 @@
 import React, { lazy, Suspense } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
-import { HOME_PAGE_ROUTE } from '@/constants'
+import {HOME_PAGE_ROUTE, SETTINGS_PAGE_ROUTE} from '@/constants'
 
 import Loader from '@/components/Loader'
 
 const HomePage = lazy(() => import('@/pages/Home'))
+const SettingsPage = lazy(() => import('@/pages/Settings'))
 
 export default () => (
   <Suspense fallback={<Loader />}>
-    <Switch>
-      <Route
-        exact
-        path={HOME_PAGE_ROUTE}
-        component={HomePage}
-      />
-    </Switch>
+    <Routes>
+      <Route path={HOME_PAGE_ROUTE} element={<HomePage />} />
+      <Route path={SETTINGS_PAGE_ROUTE} element={<SettingsPage />} />
+    </Routes>
   </Suspense>
 )

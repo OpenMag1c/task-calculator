@@ -1,18 +1,22 @@
 import styled from 'styled-components'
 
-export const Card = styled.div`
+export const Home = styled.div`
   width: 100%;
   height: 100%;
-
-  background-color: ${({ theme }) => theme.colors.white};
-
-  border-radius: 32px;
-
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+  color: blue;
+  padding: 10px;
+`
 
-  box-shadow: ${({ theme }) => theme.boxShadows[0]};
+export const ControlPanel = styled.div`
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   color: blue;
 `
 

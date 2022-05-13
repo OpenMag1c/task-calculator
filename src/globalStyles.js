@@ -33,4 +33,23 @@ export default createGlobalStyle`
     display: flex;
     background: linear-gradient(to bottom, #c06c84da, #6c5b7bda);
   }
+
+  #link {
+    color: ${theme.colors.white};
+    font-size: ${theme.fontSizes[3]}px;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: 0.5s all;
+    border: 2px solid transparent;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border-bottom: 2px solid ${theme.colors.white};
+    }
+  }
+
+  .active {
+    border-bottom: 2px solid ${theme.colors.white};
+  }
 `

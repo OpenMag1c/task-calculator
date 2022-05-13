@@ -12,8 +12,8 @@ export const StyledDiv = styled.div`
   background-color: ${({ theme }) => theme.colors.dark};
 `
 
-export const Title = styled.h3`
-  font-size: ${({ theme }) => theme.fontSizes[3]};
+export const Title = styled.span`
+  font-size: ${({ theme }) => theme.fontSizes[3]}px;
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.font};
 `
@@ -24,4 +24,5 @@ export const Navbar = styled.div`
   justify-content: stretch;
   align-items: center;
   color: ${({ theme }) => theme.colors.white};
+  margin-right: 10px;
 `

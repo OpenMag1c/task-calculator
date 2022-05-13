@@ -1,6 +1,6 @@
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 
-import React from 'react'
+import React, { StrictMode } from 'react'
 import ReactDOM from 'react-dom'
 
 import { BrowserRouter } from 'react-router-dom'
@@ -15,15 +15,17 @@ import GlobalStyles from '@/globalStyles'
 import Layouts from '@/layouts'
 
 ReactDOM.render(
-  <Provider store={store}>
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Layouts>
-          <Application />
-        </Layouts>
-        <GlobalStyles />
-      </BrowserRouter>
-    </ThemeProvider>
-  </Provider>,
+  <StrictMode>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <Layouts>
+            <Application />
+          </Layouts>
+          <GlobalStyles />
+        </BrowserRouter>
+      </ThemeProvider>
+    </Provider>
+  </StrictMode>,
   document.getElementById('root'),
 )
