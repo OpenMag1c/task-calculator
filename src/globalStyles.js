@@ -27,6 +27,7 @@ export default createGlobalStyle`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 45rem;
   }
 
   #root {

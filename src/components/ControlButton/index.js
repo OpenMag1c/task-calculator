@@ -9,6 +9,9 @@ export const ControlButton = styled.button`
   border-radius: 0.5rem;
   background-color: ${({theme}) => theme.colors.light};
   font-size: ${({theme}) => theme.fontSizes[3]}px;
+  box-shadow: inset -0.5rem -0.5rem 0.5rem ${({theme}) => theme.colors.lightGray};
+  transition: 0.2s all;
+
 
   ${({theme}) => theme.above.xs`
     height: 4.5rem;
@@ -42,5 +45,6 @@ export const ControlButton = styled.button`
   &:hover {
     cursor: pointer;
     background-color: ${({theme}) => theme.colors.lightGray};
+    box-shadow: inset -0.5rem -0.5rem 0.5rem ${({theme}) => theme.colors.light};
   }
 `

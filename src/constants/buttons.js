@@ -4,3 +4,6 @@ export const CONTROL_BUTTONS = [
   '+', '1', '2', '3', '=',
   '.', '(', '0', ')', 'CE',
 ]
+
+export const OPERATIONS = ['+', '-', '*', '/']
+export const ACTIONS = ['=', 'C', 'CE']

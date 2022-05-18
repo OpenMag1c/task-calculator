@@ -10,4 +10,8 @@ export const StyledInput = styled.span`
   text-align: right;
   outline: none;
   border: none;
+
+  ${({theme}) => theme.below.xs`
+    font-size: ${({ theme }) => theme.fontSizes[6]}px;
+  `};
 `

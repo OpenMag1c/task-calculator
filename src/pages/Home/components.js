@@ -4,10 +4,13 @@ export const Home = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  color: blue;
-  padding: 10px;
+  padding: 10px 0 10px 10px;
+
+  ${({theme}) => theme.below.xs`
+    padding: 0;
+  `};
 `
 
 export const ControlPanel = styled.div`
@@ -17,7 +20,11 @@ export const ControlPanel = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  color: blue;
+
+  ${({theme}) => theme.below.xs`
+    height: 60%;
+    width: 100%;
+  `};
 `
 
 export const Heading = styled.h3``

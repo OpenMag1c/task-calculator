@@ -1,25 +1,20 @@
-import React, {useCallback, useState} from 'react'
-
+import React from 'react'
 import {Home, ControlPanel} from './components'
 import Display from "@/containers/Display"
 import KeyBoard from "@/containers/KeyBoard"
 import History from "@/containers/History"
+import useCalculation from "@/pages/Home/useCalculation"
 
 export default () => {
-  const [example, setExample] = useState("")
+  const {example, setExample, history, onPressKey} = useCalculation()
 
-  const pressKey = useCallback(event => {
-    event.persist()
-    console.log(event.target.dataset.key)
-    setExample(prevState => prevState + event.target.dataset.key)
-  }, [])
   return (
     <Home>
       <ControlPanel>
-        <Display text={example}/>
-        <KeyBoard onPressKey={pressKey}/>
+        <Display text={example} />
+        <KeyBoard onPressKey={onPressKey} />
       </ControlPanel>
-      <History />
+      <History history={history} setExample={setExample}/>
     </Home>
   )
 }

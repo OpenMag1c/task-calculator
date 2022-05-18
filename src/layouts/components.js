@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import {StyledFlex} from "@/containers/Flex/components"
 
 export const PageLayout = styled.div`
   width: 100%;
@@ -11,9 +10,12 @@ export const PageLayout = styled.div`
   margin: 0 auto;
 `
 
-export const MainWindow = styled(StyledFlex)`
+export const MainWindow = styled.div`
   height: 92%;
   width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
 
   background-color: ${({theme}) => theme.colors.white};
 `
