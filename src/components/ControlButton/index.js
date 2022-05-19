@@ -11,7 +11,7 @@ export const ControlButton = styled.button`
   font-size: ${({theme}) => theme.fontSizes[3]}px;
   box-shadow: inset -0.5rem -0.5rem 0.5rem ${({theme}) => theme.colors.lightGray};
   transition: 0.2s all;
-
+  color: ${({theme}) => theme.colors.black};
 
   ${({theme}) => theme.above.xs`
     height: 4.5rem;

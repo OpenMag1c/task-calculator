@@ -1,7 +1,7 @@
 import React from "react"
 
 import {PageLayout, MainWindow} from './components'
-import Header from "@/containers/Header"
+import Header from "@/components/Header"
 
 export default ({ children }) => {
   return (

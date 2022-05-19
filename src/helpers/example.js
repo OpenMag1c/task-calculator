@@ -8,7 +8,7 @@ class Example {
   }
 
   calculate() {
-    return solveExample(this.example).toString()
+    return solveExample(this.example)
   }
 }
 

@@ -8,11 +8,20 @@ export const ScrollDiv = styled.div`
   border-left: 1px solid ${({ theme }) => theme.colors.black};
   overflow-y: scroll;
 
+  ::-webkit-scrollbar {
+    width: 0.5rem; /* ширина для вертикального скролла */
+    height: 1rem; /* высота для горизонтального скролла */
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.colors.dark};
+    border-radius: 9em;
+  }
+
   ${({theme}) => theme.below.xs`
-    min-width: 20rem;
     margin-left: 0;
     height: 40%;
-    flex: 1;
   `};
 `
 

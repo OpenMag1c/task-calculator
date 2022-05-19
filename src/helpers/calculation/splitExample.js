@@ -13,7 +13,6 @@ export const splitExample = example => { // split into an array of operations an
     if (OPERATIONS.includes(example[i])) {  // division into an array of operations and numbers
       operations.push(example[i])
       if (number) {
-        console.log(number)
         numbers.push(Number(number))
         number = ''
       }

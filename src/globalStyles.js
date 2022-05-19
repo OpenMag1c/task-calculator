@@ -49,8 +49,4 @@ export default createGlobalStyle`
       border-bottom: 2px solid ${theme.colors.white};
     }
   }
-
-  .active {
-    border-bottom: 2px solid ${theme.colors.white};
-  }
 `
