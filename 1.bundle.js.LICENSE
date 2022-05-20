@@ -1,0 +1,68 @@
+/***/
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+
+/*#__PURE__*/
+
+// CONCATENATED MODULE: ./src/pages/Home/components.js
+
+// CONCATENATED MODULE: ./src/components/Display/components.js
+
+// CONCATENATED MODULE: ./src/components/Display/index.jsx
+
+/* harmony default export */
+
+// CONCATENATED MODULE: ./src/components/ControlButton/index.js
+
+// CONCATENATED MODULE: ./src/constants/buttons.js
+
+// CONCATENATED MODULE: ./src/containers/History/components.js
+
+// lazy load so that environments that need to polyfill have a chance to do so
+
+// getRandomValues needs to be invoked in a context where "this" is a Crypto implementation. Also,
+
+// find the complete implementation of crypto (msCrypto) on IE11.
+
+// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-browser/regex.js
+
+// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-browser/validate.js
+
+// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-browser/stringify.js
+
+/**
+ * Convert array of 16 byte values to UUID string format of the form:
+ * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ */
+
+// Note: Be careful editing this code!  It's been tuned for performance
+
+// and works in ways you may not expect. See https://github.com/uuidjs/uuid/pull/434
+
+// Consistency check for valid UUID.  If this throws, it's likely due to one
+
+// of the following:
+
+// - One or more input array values don't map to a hex octet (leading to
+
+// "undefined" in the uuid)
+
+// - Invalid input values for the RFC `version` or `variant` fields
+
+// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-browser/v4.js
+
+// Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+
+// Copy bytes to buffer, if provided
+
+// CONCATENATED MODULE: ./src/helpers/calculation/truncated.js
+
+// CONCATENATED MODULE: ./src/helpers/calculation/calculator.js
+
+// split into an array of operations and an array of numbers
+
+// division into an array of operations and numbers
+
+// check for negative number
+
+// fix situation like 16(-1) => 16*(-1)
