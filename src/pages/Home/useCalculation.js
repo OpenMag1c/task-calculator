@@ -1,10 +1,11 @@
 import {useCallback, useState} from "react"
 import Example from "@/helpers/example"
 import updateLine from "@/helpers/updateLine"
+import {getHistoryFromStorage, setHistoryToStorage} from "@/helpers/localStorage/history"
 
 const useCalculation = () => {
   const [example, setExample] = useState('')
-  const [history, setHistory] = useState([])
+  const [history, setHistory] = useState(() => getHistoryFromStorage())
 
   const onPressKey = useCallback(event => {
     event.persist()
@@ -14,7 +15,7 @@ const useCalculation = () => {
       const result = command.calculate()
       if (isFinite(result)) {
         setExample(result.toString())
-        setHistory([...history, command])
+        updateHistory([...history, command])
       } else {
         alert(`Smth is wrong, You've got ${result}`)
         setExample('')
@@ -24,7 +25,12 @@ const useCalculation = () => {
     }
   }, [example, history])
 
-  return {example, setExample, history, setHistory, onPressKey}
+  const updateHistory = history => {
+    setHistory(history)
+    setHistoryToStorage(history)
+  }
+
+  return {example, setExample, history, updateHistory, onPressKey}
 }
 
 export default useCalculation

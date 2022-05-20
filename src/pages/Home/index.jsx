@@ -6,7 +6,7 @@ import History from "@/containers/History"
 import useCalculation from "@/pages/Home/useCalculation"
 
 export default () => {
-  const {example, setExample, history, setHistory, onPressKey} = useCalculation()
+  const {example, setExample, history, updateHistory, onPressKey} = useCalculation()
 
   return (
     <Home>
@@ -17,7 +17,7 @@ export default () => {
       <History
         history={history}
         setExample={setExample}
-        setHistory={setHistory}
+        updateHistory={updateHistory}
       />
     </Home>
   )

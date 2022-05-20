@@ -16,6 +16,10 @@ import themes from '@/constants/themes'
 import { getTheme } from '@/helpers/getTheme'
 import { Error } from '@/components/Error'
 import { ERROR } from '@/constants/names'
+import {
+  getThemeFromStorage,
+  setThemeToStorage,
+} from '@/helpers/localStorage/theme'
 
 export const ThemeContext = React.createContext(
   themes.lightTheme,
@@ -25,14 +29,12 @@ class AppContainer extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      theme:
-        window.localStorage.getItem('theme') ||
-        themes.lightTheme,
+      theme: getThemeFromStorage(),
       isError: false,
     }
     this.toggleTheme = theme => {
       this.setState({ theme })
-      window.localStorage.setItem('theme', theme)
+      setThemeToStorage(theme)
     }
   }
 

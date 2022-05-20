@@ -1,33 +1,34 @@
 import React from 'react'
 
-import {ScrollDiv, NoteButton, Title} from './components'
+import {ScrollDiv, HistoryButton, Title} from './components'
+import {CLEAR_ALL, HISTORY} from "@/constants/names"
 
-export default React.memo(({ history, setExample, setHistory }) => {
+export default React.memo(({ history, setExample, updateHistory }) => {
   const onNoteClick = note => {
     setExample(note.example)
   }
   const clearHistory = () => {
-    setHistory([])
+    updateHistory([])
   }
 
   return (
     <ScrollDiv>
-      <Title>History</Title>
+      <Title>{HISTORY}</Title>
       {history.map(note =>
-        <NoteButton
+        <HistoryButton
           type="button"
           key={note.id}
           onClick={() => onNoteClick(note)}
         >
           {note.example}
-        </NoteButton>,
+        </HistoryButton>,
       )}
       {history.length > 0 &&
-        <NoteButton
+        <HistoryButton
         type="button"
         onClick={clearHistory}>
-          Clear all
-        </NoteButton>}
+          {CLEAR_ALL}
+        </HistoryButton>}
     </ScrollDiv>
   )
 })

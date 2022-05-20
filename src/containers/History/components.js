@@ -32,7 +32,7 @@ export const Title = styled.h4`
   text-align: center;
 `
 
-export const NoteButton = styled.button`
+export const HistoryButton = styled.button`
   width: 100%;
   min-height: 3rem;
   outline: none;
