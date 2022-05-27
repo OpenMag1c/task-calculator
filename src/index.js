@@ -1,45 +1,39 @@
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-import React, { StrictMode } from 'react'
-import ReactDOM from 'react-dom'
+import React, { StrictMode } from "react";
+import ReactDOM from "react-dom";
 
-import { BrowserRouter } from 'react-router-dom'
-import { Provider } from 'react-redux'
-import { ThemeProvider } from 'styled-components'
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { ThemeProvider } from "styled-components";
 
-import Application from '@/App'
+import { store } from "./store";
+import GlobalStyles from "@/globalStyles";
+import Layouts from "@/layouts";
+import themes from "@/constants/themes";
+import { getTheme } from "@/helpers/getTheme";
+import { Error } from "@/components/Error";
+import { ERROR } from "@/constants/names";
+import { getThemeFromStorage, setThemeToStorage } from "@/helpers/localStorage/theme";
+import Application from "@/App";
 
-import { store } from '@/store'
-import GlobalStyles from '@/globalStyles'
-import Layouts from '@/layouts'
-import themes from '@/constants/themes'
-import { getTheme } from '@/helpers/getTheme'
-import { Error } from '@/components/Error'
-import { ERROR } from '@/constants/names'
-import {
-  getThemeFromStorage,
-  setThemeToStorage,
-} from '@/helpers/localStorage/theme'
-
-export const ThemeContext = React.createContext(
-  themes.lightTheme,
-)
+export const ThemeContext = React.createContext(themes.lightTheme);
 
 class AppContainer extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       theme: getThemeFromStorage(),
       isError: false,
-    }
+    };
     this.toggleTheme = theme => {
-      this.setState({ theme })
-      setThemeToStorage(theme)
-    }
+      this.setState({ theme });
+      setThemeToStorage(theme);
+    };
   }
 
   static getDerivedStateFromError() {
-    return { isError: true }
+    return { isError: true };
   }
 
   render() {
@@ -47,8 +41,7 @@ class AppContainer extends React.Component {
       <StrictMode>
         <Provider store={store}>
           <ThemeContext.Provider value={this.toggleTheme}>
-            <ThemeProvider
-              theme={getTheme(this.state.theme)}>
+            <ThemeProvider theme={getTheme(this.state.theme)}>
               <BrowserRouter>
                 {this.state.isError ? (
                   <Error>{ERROR}</Error>
@@ -63,11 +56,8 @@ class AppContainer extends React.Component {
           </ThemeContext.Provider>
         </Provider>
       </StrictMode>
-    )
+    );
   }
 }
 
-ReactDOM.render(
-  <AppContainer />,
-  document.getElementById('root'),
-)
+ReactDOM.render(<AppContainer />, document.getElementById("root"));

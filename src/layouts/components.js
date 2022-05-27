@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const PageLayout = styled.div`
   width: 100%;
@@ -8,7 +8,7 @@ export const PageLayout = styled.div`
 
   padding: ${({ theme }) => theme.spaces[4]}px;
   margin: 0 auto;
-`
+`;
 
 export const MainWindow = styled.div`
   height: 92%;
@@ -17,5 +17,5 @@ export const MainWindow = styled.div`
   align-items: stretch;
   justify-content: stretch;
 
-  background-color: ${({theme}) => theme.colors.white};
-`
+  background-color: ${({ theme }) => theme.colors.white};
+`;

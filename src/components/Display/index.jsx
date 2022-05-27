@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import StyledSpan from "./components";
 
-import {StyledInput} from './components'
-
-export default ({ text }) => {
+function Display({ text }) {
   return (
-    <StyledInput>
+    <StyledSpan>
       {text}
-    </StyledInput>
-  )
+    </StyledSpan>
+  );
 }
+
+export default Display;

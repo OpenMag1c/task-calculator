@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
-import theme from './theme'
+import theme from "./theme";
 
 export default createGlobalStyle`
   * {
@@ -49,4 +49,4 @@ export default createGlobalStyle`
       border-bottom: 2px solid ${theme.colors.white};
     }
   }
-`
+`;

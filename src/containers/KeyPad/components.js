@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Panel = styled.div`
   width: 100%;
@@ -8,4 +8,4 @@ export const Panel = styled.div`
   justify-content: space-around;
   align-items: center;
   border-top: 1px solid ${({ theme }) => theme.colors.black};
-`
+`;

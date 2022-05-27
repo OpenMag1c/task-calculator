@@ -1,18 +1,18 @@
-import React, {useContext, useState} from 'react'
-import {SelectTheme, Settings, Title} from "@/pages/Settings/components"
-import themes from "@/constants/themes"
-import {ThemeContext} from "@/index"
-import {SETTINGS} from "@/constants/names"
-import storageKeys from "@/helpers/localStorage/keys"
+import React, { useContext, useState } from "react";
+import { SelectTheme, Settings, Title } from "@/pages/Settings/components";
+import themes from "@/constants/themes";
+import { ThemeContext } from "@/index";
+import { SETTINGS } from "@/constants/names";
+import storageKeys from "@/helpers/localStorage/keys";
 
-export default () => {
-  const [theme, setTheme] = useState(window.localStorage.getItem(storageKeys.theme) || themes.lightTheme)
-  const toggleTheme = useContext(ThemeContext)
+export default function () {
+  const [theme, setTheme] = useState(window.localStorage.getItem(storageKeys.theme) || themes.lightTheme);
+  const toggleTheme = useContext(ThemeContext);
   const onChangeTheme = event => {
-    const updateTheme = event.target.value
-    toggleTheme(updateTheme)
-    setTheme(updateTheme)
-  }
+    const updateTheme = event.target.value;
+    toggleTheme(updateTheme);
+    setTheme(updateTheme);
+  };
 
   return (
     <Settings>
@@ -28,5 +28,5 @@ export default () => {
         </option>
       </SelectTheme>
     </Settings>
-    )
+  );
 }

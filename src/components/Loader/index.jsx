@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
-import theme from '@/theme'
+import theme from "@/theme";
 
-import { Loader } from './components'
+import { Loader } from "./components";
 
-const LOADER_SIZE = 100
+const LOADER_SIZE = 100;
 
-export default () => {
+export default function () {
   return (
     <Loader
       type="Bars"
@@ -14,5 +14,5 @@ export default () => {
       height={LOADER_SIZE}
       width={LOADER_SIZE}
     />
-  )
+  );
 }

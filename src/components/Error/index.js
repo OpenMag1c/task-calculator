@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Error = styled.div`
   width: 100%;
@@ -6,5 +6,5 @@ export const Error = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: ${({theme}) => theme.fontSizes[7]}px;;
-`
+  font-size: ${({ theme }) => theme.fontSizes[7]}px;;
+`;

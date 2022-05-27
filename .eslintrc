@@ -1,5 +1,5 @@
 {
-  "extends": ["standard", "standard-react", "prettier", "prettier/react"],
+  "extends": ["standard", "standard-react", "prettier", "prettier/react", "airbnb/hooks", "airbnb"],
   "plugins": ["prettier", "react-hooks", "cypress"],
   "parser": "babel-eslint",
   "env": {
@@ -20,6 +20,7 @@
         "ignorePattern": "import"
       }
     ],
+    "quotes": ["error", "double"],
     "no-unused-vars": "warn",
     "operator-linebreak": "warn",
     "react-hooks/rules-of-hooks": "error",
@@ -33,9 +34,9 @@
       }
     ],
     "react/jsx-filename-extension": [
-      2,
+      1,
       {
-        "extensions": [".jsx"]
+        "extensions": [".jsx", ".js"]
       }
     ],
     "jsx-quotes": ["error", "prefer-double"],
@@ -54,14 +55,16 @@
     {
       "files": ["src/index.js"],
       "rules": {
-        "react/jsx-filename-extension": "off",
-        "prettier/prettier": [
-          "error",
-          {
-            "singleQuote": true
-          }
-        ]
+        "react/jsx-filename-extension": "off"
       }
     }
-  ]
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory":["node_modules", "src/"]
+      }
+    }
+  }
 }

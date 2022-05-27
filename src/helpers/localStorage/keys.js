@@ -1,4 +1,4 @@
-const theme = 'theme'
-const history = 'history'
+const theme = "theme";
+const history = "history";
 
-export default {theme, history}
+export default { theme, history };

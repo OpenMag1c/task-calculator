@@ -1,18 +1,20 @@
-import React from 'react'
+import React from "react";
 
-import { StyledDiv, Title, Navbar } from './components'
-import {APP_NAME} from "@/constants/names"
-import {NavLink} from "react-router-dom"
-import {HOME_PAGE_NAME, HOME_PAGE_ROUTE, SETTINGS_PAGE_NAME, SETTINGS_PAGE_ROUTE} from "@/constants"
+import { NavLink } from "react-router-dom";
+import { StyledDiv, Title, Navbar } from "./components";
+import { APP_NAME } from "@/constants/names";
+import {
+  HOME_PAGE_NAME, HOME_PAGE_ROUTE, SETTINGS_PAGE_NAME, SETTINGS_PAGE_ROUTE,
+} from "@/constants";
 
-export default () => {
-  const setActiveLinkStyle = ({isActive}) => {
+export default function () {
+  const setActiveLinkStyle = ({ isActive }) => {
     if (isActive) {
       return ({
-        borderBottom: '2px solid white',
-      })
+        borderBottom: "2px solid white",
+      });
     }
-  }
+  };
 
   return (
     <StyledDiv>
@@ -36,6 +38,5 @@ export default () => {
         </NavLink>
       </Navbar>
     </StyledDiv>
-  )
+  );
 }
-

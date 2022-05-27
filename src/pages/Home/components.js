@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-export const Home = styled.div`
+export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -8,10 +8,10 @@ export const Home = styled.div`
   flex-wrap: wrap;
   padding: 10px 0 10px 10px;
 
-  ${({theme}) => theme.below.xs`
+  ${({ theme }) => theme.below.xs`
     padding: 0;
   `};
-`
+`;
 
 export const ControlPanel = styled.div`
   width: 80%;
@@ -21,10 +21,10 @@ export const ControlPanel = styled.div`
   align-items: center;
   flex-direction: column;
 
-  ${({theme}) => theme.below.xs`
+  ${({ theme }) => theme.below.xs`
     height: 60%;
     width: 100%;
   `};
-`
+`;
 
-export const Heading = styled.h3``
+export const Heading = styled.h3``;

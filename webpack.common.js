@@ -1,16 +1,16 @@
-const path = require('path')
+const path = require("path");
 const {
   CleanWebpackPlugin,
-} = require('clean-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const Dotenv = require('dotenv-webpack')
+} = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/',
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+    publicPath: "/",
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -18,36 +18,36 @@ module.exports = {
       systemvars: true,
     }),
     new HtmlWebpackPlugin({
-      title: 'React Project Template',
-      template: './public/index.html',
+      title: "React Project Template",
+      template: "./public/index.html",
     }),
   ],
   module: {
     rules: [
       {
         test: /\.js$/,
-        enforce: 'pre',
-        use: ['source-map-loader'],
+        enforce: "pre",
+        use: ["source-map-loader"],
       },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
         },
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.svg$/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: "babel-loader",
           },
           {
-            loader: 'react-svg-loader',
+            loader: "react-svg-loader",
             options: {
               jsx: true,
             },
@@ -56,20 +56,20 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ['file-loader'],
+        use: ["file-loader"],
       },
       {
         test: /\.(jpg|png)$/,
         use: {
-          loader: 'url-loader',
+          loader: "url-loader",
         },
       },
     ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ["*", ".js", ".jsx"],
     alias: {
-      '@': path.resolve(__dirname, 'src'),
+      "@": path.resolve(__dirname, "src"),
     },
   },
-}
+};

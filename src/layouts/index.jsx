@@ -1,9 +1,9 @@
-import React from "react"
+import React from "react";
 
-import {PageLayout, MainWindow} from './components'
-import Header from "@/components/Header"
+import { PageLayout, MainWindow } from "./components";
+import Header from "@/components/Header";
 
-export default ({ children }) => {
+export default function ({ children }) {
   return (
     <PageLayout>
       <Header />
@@ -11,5 +11,5 @@ export default ({ children }) => {
         {children}
       </MainWindow>
     </PageLayout>
-  )
+  );
 }

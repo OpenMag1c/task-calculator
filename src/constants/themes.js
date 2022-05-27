@@ -1,4 +1,4 @@
-const lightTheme = 'Light Theme'
-const darkTheme = 'Dark Theme'
+const lightTheme = "Light Theme";
+const darkTheme = "Dark Theme";
 
-export default {lightTheme, darkTheme}
+export default { lightTheme, darkTheme };
